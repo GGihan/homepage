@@ -1,2 +1,2 @@
-# template-repo
-Just a basic template for me.
+# homepage
+A responsive homepage, made to practice my advanced HTML and CSS concepts.

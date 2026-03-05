@@ -20,7 +20,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-        title: 'Todo-List',
+        title: 'homepage',
         template: './src/index.html',
         }),
         new CopyWebpackPlugin({
