@@ -34,19 +34,21 @@ body {
     font-display: swap;
 }
 
+header,
+main,
+footer {
+    min-height: 70vh;
+    padding: 64px;
+}
+
 header {
     background-color: lightskyblue;
 
-    min-height: 70vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .header-image.container {
-    max-width: 40vw;
-    min-height: 60vh;
-
     flex: 1;
 }
 
@@ -54,13 +56,15 @@ header {
     max-width: 100%;
     min-height: 60vh;
     object-fit: cover;
+    object-position: right center;
 }
 
 .header-card.container {
+    flex: 1;
     display: flex;
     flex-direction: column;
 
-    max-width: 50vw;
+    min-width: 60%;
     min-height: 50vh;
 
     padding: 16px;
@@ -85,9 +89,10 @@ header {
 
 main {
     background-color: lightgreen;
+}
 
-    display: flex;
-    flex-direction: column;
+.main.title {
+
 }
 
 .main.container {
@@ -104,6 +109,7 @@ footer {
 .contact-card.container {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .contact-card.title {
@@ -120,6 +126,10 @@ footer {
 
 .contact-card.socials {
     flex: 2;
+}
+
+.contact-image.container {
+    flex: 1;
 }
 
 .container {
