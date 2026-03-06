@@ -11,6 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+
+    font-size: 1.5rem;
+    line-height: 2.5rem;
 }
 
 @font-face {
@@ -33,16 +36,92 @@ body {
 
 header {
     background-color: lightskyblue;
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container {
-    border: 2px solid black;
+.header-image.container {
+    max-width: 40vw;
+    min-height: 60vh;
+
+    flex: 1;
+}
+
+.header-image img {
+    max-width: 100%;
+    min-height: 60vh;
+    object-fit: cover;
+}
+
+.header-card.container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 50vw;
+    min-height: 50vh;
+
+    padding: 16px;
+}
+
+.header-card.title,
+.header-card.socials {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-card.description {
+    flex: 3;
+    text-wrap: balance;
+}
+
+.header-card.socials {
+    justify-content: right;
+    gap: 16px;
 }
 
 main {
     background-color: lightgreen;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 footer {
     background-color: lightcoral;
+
+    display: flex;
+}
+
+.contact-card.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card.title {
+    flex: 1;
+}
+
+.contact-card.description {
+    flex: 1;
+}
+
+.contact-card.info {
+    flex: 3;
+}
+
+.contact-card.socials {
+    flex: 2;
+}
+
+.container {
+    border: 2px solid black;
 }
