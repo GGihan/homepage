@@ -14,6 +14,7 @@ body {
 
     font-size: 1.5rem;
     line-height: 2.5rem;
+    text-wrap: balance;
 }
 
 @font-face {
@@ -79,7 +80,6 @@ header {
 
 .header-card.description {
     flex: 3;
-    text-wrap: balance;
 }
 
 .header-card.socials {
@@ -89,10 +89,6 @@ header {
 
 main {
     background-color: lightgreen;
-}
-
-.main.title {
-
 }
 
 .main.container {
@@ -110,6 +106,8 @@ footer {
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    padding: 16px;
 }
 
 .contact-card.title {
@@ -118,18 +116,45 @@ footer {
 
 .contact-card.description {
     flex: 1;
+    margin-bottom: 32px;
 }
 
 .contact-card.info {
     flex: 3;
 }
 
+.contact-card.address {
+    margin-bottom: 32px;
+}
+
+.contact-card.link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    text-decoration: none;
+    color: inherit;
+}
+
 .contact-card.socials {
+    display: flex;
+    gap: 12px;
     flex: 2;
 }
 
 .contact-image.container {
+    display: flex;
+    justify-content: flex-end;
     flex: 1;
+    
+    min-width: 60%;
+}
+
+.contact-image img {
+    height: 70vh;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: right center;
 }
 
 .container {
