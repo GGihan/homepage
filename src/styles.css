@@ -52,6 +52,7 @@ header {
 .header-image.container {
     flex: 1;
     max-height: 60vh;
+    position: relative;
 }
 
 .header-image img {
@@ -59,6 +60,15 @@ header {
     min-height: 60vh;
     object-fit: cover;
     object-position: top 30% right 30%;
+}
+
+.header-image.name {
+    position: absolute;
+    bottom: 16px;
+    margin-left: 16px;
+    color: white;
+    font-family: 'Dancing Script';
+    line-height: 3rem;
 }
 
 .header-card.container {
@@ -225,6 +235,13 @@ footer {
 
     .header-image img {
         min-height: 100%;
+    }
+
+    .header-image.name {
+        display: flex;
+        top: 5%;
+        left: 70%;
+        text-wrap: nowrap;
     }
 
     .header-card.container {
