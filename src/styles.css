@@ -51,6 +51,7 @@ header {
 
 .header-image.container {
     flex: 1;
+    max-height: 60vh;
 }
 
 .header-image img {
@@ -66,16 +67,15 @@ header {
     flex-direction: column;
 
     min-width: 60%;
-    min-height: 50vh;
+    min-height: 40vh;
 
-    padding: 16px;
+    padding: 32px;
 }
 
 .header-card.title,
 .header-card.socials {
     flex: 1;
     display: flex;
-    align-items: center;
 }
 
 .header-card.description {
@@ -87,13 +87,59 @@ header {
     gap: 16px;
 }
 
+.header-card.socials a {
+    display: flex;
+}
+
 main {
     background-color: lightgreen;
 }
 
+.main.title {
+    margin-bottom: 16px;
+}
+
 .main.container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(300px, 400px));
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.project-card.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card.project-image.container {
+    flex: 1;
+}
+
+.project-card.project-image img {
+    max-width: 100%;
+    min-height: 30vh;
+    object-fit: cover;
+}
+
+.project-card.info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.project-card.link {
+    display: flex;
+    gap: 16px;
+}
+
+.project-card.link a {
+    display: flex;
+}
+
+.project-card.description {
+    flex: 1;
+    padding: 0 16px 16px 16px;
 }
 
 footer {
@@ -106,8 +152,6 @@ footer {
     display: flex;
     flex-direction: column;
     flex: 1;
-
-    padding: 16px;
 }
 
 .contact-card.title {
