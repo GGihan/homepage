@@ -168,6 +168,7 @@ footer {
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding-right: 8px;
 }
 
 .contact-card.title {
@@ -252,6 +253,7 @@ footer {
 
     .header-card.title {
         margin-top: 64px;
+        text-align: center;
         display: block;
     }
 }
@@ -261,6 +263,11 @@ footer {
     main,
     footer {
         padding: 16px;
+    }
+
+    header,
+    main {
+        padding-bottom: 128px;
     }
 
     .header-image.container {
@@ -285,16 +292,53 @@ footer {
 
     .header-card.title {
         margin-top: 0;
-        text-align: center;
     }
 
     .header-card.socials {
         justify-content: center;
     }
     
+    .main.title {
+        text-align: center;
+    }
+
     .main.container {
         grid-template-columns: repeat(1, minmax(200px, 400px));
         justify-content: center;
+        gap: 96px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .contact-card.container {
+        padding: 16px;
+    }
+
+    .contact-card.title {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .contact-card.link img {
+        display: none;
+    }
+
+    .contact-card.socials {
+        justify-content: center;
+        margin: 16px 0 64px 0;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+    .header-image.container {
+        max-height: 80vh;
+    }
+
+    .contact-image img {
+        height: 100%;
     }
 }
 
