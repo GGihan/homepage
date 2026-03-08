@@ -238,7 +238,6 @@ footer {
     }
 
     .header-image.name {
-        display: flex;
         top: 5%;
         left: 70%;
         text-wrap: nowrap;
@@ -253,10 +252,46 @@ footer {
 
     .header-card.title {
         margin-top: 64px;
+        display: block;
     }
 }
 
 @media (max-width: 600px) {
+    header,
+    main,
+    footer {
+        padding: 16px;
+    }
+
+    .header-image.container {
+        height: 70vh;
+        width: 100%;
+        margin: 0 0 32px 0;  
+    }
+
+    .header-image.name {
+        top: unset;
+        left: unset; 
+        text-wrap: wrap;
+        bottom: 16px;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+
+    .header-card.container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-card.title {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .header-card.socials {
+        justify-content: center;
+    }
+    
     .main.container {
         grid-template-columns: repeat(1, minmax(200px, 400px));
         justify-content: center;
