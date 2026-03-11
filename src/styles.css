@@ -374,3 +374,26 @@ footer {
         height: 100%;
     }
 }
+
+.project-card.container {
+    transition: transform 1s;
+}
+
+.project-card.container:hover {
+    transform: scale(1.1);
+}
+
+.socials a,
+.project-card a,
+.contact-card a {
+    transition: transform 0.5s;
+}
+
+.socials a:hover,
+.project-card a:hover {
+    transform: translateY(-10px) scale(1.2);
+}
+
+.contact-card a:hover {
+    transform: translateY(-10px) scale(1.1);
+}
