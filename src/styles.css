@@ -69,6 +69,8 @@ header {
     min-height: 60vh;
     object-fit: cover;
     object-position: top 30% right 30%;
+
+    box-shadow: 3px 3px 5px black;
 }
 
 .header-image.name {
@@ -292,7 +294,12 @@ footer {
     .header-image.container {
         height: 70vh;
         width: 100%;
-        margin: 0 0 32px 0;  
+        margin: 0 0 32px 0;
+        border: unset;
+    }
+
+    .header-image img {
+        box-shadow: unset;
     }
 
     .header-image.name {
@@ -366,8 +373,4 @@ footer {
     .contact-image img {
         height: 100%;
     }
-}
-
-.container {
-    /* border: 2px solid black; */
 }

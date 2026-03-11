@@ -10,7 +10,15 @@
 <body>
     <header>
         <picture class="header-image container">
-            <img src="./images/header-man-1920w.jpg" alt="man sitting in front of computer">
+            <source
+                srcset="./images/header-man-1920w.jpg"
+                media="(min-width: 900px)"
+            />
+            <source
+                srcset="./images/header-man-1280w.jpg"
+                media="(min-width: 600px)"
+            />
+            <img src="./images/header-man-640w.jpg" alt="man sitting in front of computer">
             <div class="header-image name"><h1>William Neumann</h1></div>
         </picture>
         
@@ -173,7 +181,16 @@
             </div>
         </section>
         <div class="contact-image container">
-            <img src="./images/contact-man-1920w.jpg" alt="man speaking on his mobile phone" width="800px">
+            <img 
+                alt="man speaking on his mobile phone"
+                width="800px"
+                srcset="
+                    ./images/contact-man-640w.jpg 640w,
+                    ./images/contact-man-1280w.jpg 1280w,
+                    ./images/contact-man-1920w.jpg 1920w
+                "
+                sizes="(max-width: 900px)"        
+            >
         </div>
     </footer>
 </body>
