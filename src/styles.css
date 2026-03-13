@@ -56,8 +56,7 @@ header {
 }
 
 .header-image.container {
-    flex: 1;
-    max-height: 60vh;
+    flex: 2;
     position: relative;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
@@ -65,8 +64,10 @@ header {
 }
 
 .header-image img {
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
     min-height: 60vh;
+    display: block;
     object-fit: cover;
     object-position: top 30% right 30%;
 
@@ -83,12 +84,9 @@ header {
 }
 
 .header-card.container {
-    flex: 1;
+    flex: 3;
     display: flex;
     flex-direction: column;
-
-    min-width: 60%;
-    min-height: 40vh;
 
     padding: 32px;
     background-color: rgb(255, 255, 255);
@@ -267,7 +265,7 @@ footer {
 
     .header-card.container {
         display: block;
-        min-height: 70vh;
+        min-height: 50vh;
         margin-top: 100px;
         margin-left: 50px;
     }
@@ -313,7 +311,7 @@ footer {
 
     .header-card.container {
         margin: 0;
-        padding: 0;
+        padding: 8px;
         box-shadow: unset;
     }
 
