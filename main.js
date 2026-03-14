@@ -1,0 +1,2 @@
+(()=>{"use strict";if(!CSS.supports("animation-timeline","scroll()")){const t=document.createElement("script");t.src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js",document.head.appendChild(t)}})();
+//# sourceMappingURL=main.js.map
