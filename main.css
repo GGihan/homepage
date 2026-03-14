@@ -496,6 +496,7 @@ footer {
     pointer-events: none;
     will-change: transform, opacity;
     box-shadow: 3px 3px 5px black;
+    opacity: 0;
 
     animation: fade-in linear both;
     animation-timeline: view();
