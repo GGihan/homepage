@@ -23,8 +23,8 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-        title: 'homepage',
-        template: './src/index.html',
+            title: 'homepage',
+            template: './src/index.html',
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",

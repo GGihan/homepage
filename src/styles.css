@@ -61,6 +61,7 @@ header {
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 6px;
+    animation: 1s slide-in-left-bounce ease-in;
 }
 
 .header-image img {
@@ -294,6 +295,7 @@ footer {
         width: 100%;
         margin: 0 0 32px 0;
         border: unset;
+        animation: 1s slide-in-top-bounce ease-in;
     }
 
     .header-image img {
@@ -373,6 +375,8 @@ footer {
     }
 }
 
+/*Animations*/
+
 .project-card.container {
     transition: transform 1s;
 }
@@ -394,4 +398,56 @@ footer {
 
 .contact-card a:hover {
     transform: translateY(-10px) scale(1.1);
+}
+
+@keyframes slide-in-left-bounce {
+    0% {
+        transform: translateX(-800px);
+    }
+
+    60% {
+        transform: translateX(0);
+    }
+
+    70% {
+        transform: translateX(-30px);
+    }
+
+    80% {
+        transform: translateX(0);
+    }
+
+    90% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-top-bounce {
+    0% {
+        transform: translateY(-800px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-30px);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
