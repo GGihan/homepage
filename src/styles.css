@@ -46,6 +46,11 @@ footer {
     font-size: 3rem;
 }
 
+a {
+    width: fit-content;
+    height: fit-content;
+}
+
 header {
     display: flex;
     align-items: center;
