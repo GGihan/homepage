@@ -143,7 +143,8 @@ main {
     display: flex;
     flex-direction: column;
 
-    box-shadow: 3px 3px 5px black;
+    position: relative;
+    will-change: clip-path;
 }
 
 .project-image.container {
@@ -154,6 +155,7 @@ main {
     max-width: 100%;
     min-height: 30vh;
     object-fit: cover;
+    transform: translateZ(0);
 }
 
 .project-card.info {
@@ -384,6 +386,8 @@ footer {
 
 .project-card.container {
     transition: transform 1s;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 .project-card.container:hover {
@@ -455,4 +459,45 @@ footer {
     100% {
         transform: translateY(0);
     }
+}
+
+@keyframes reveal {
+    from { 
+        opacity: 0; 
+        clip-path: inset(45% 20% 45% 20%);
+    }
+
+    to { 
+        opacity: 1; 
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.revealing-card {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% entry 90%;
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0; 
+    }
+
+    to { 
+        opacity: 1; 
+    }
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+    box-shadow: 3px 3px 5px black;
+
+    animation: fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 80% entry 90%;
 }
