@@ -384,6 +384,18 @@ footer {
 
 /*Animations*/
 
+.header-card.container a:nth-child(1) {
+    animation: 10s wiggle infinite ease-in;
+}
+
+.header-card.container a:nth-child(2) {
+    animation: 10s wiggle infinite 0.25s ease-in;
+}
+
+.header-card.container a:nth-child(3) {
+    animation: 10s wiggle infinite 0.5s ease-in;
+}
+
 .project-card.container {
     transition: transform 1s;
     backface-visibility: hidden;
@@ -402,7 +414,8 @@ footer {
 
 .socials a:hover,
 .project-card a:hover {
-    transform: translateY(-10px) scale(1.2);
+    translate: 0 -10px; 
+    scale: 1.2;
 }
 
 .contact-card a:hover {
@@ -500,4 +513,30 @@ footer {
     animation: fade-in linear both;
     animation-timeline: view();
     animation-range: entry 80% entry 90%;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    2.5% {
+        transform: translateX(-10px) rotate(-0.10turn);
+    }
+
+    5.0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    7.5% {
+        transform: translateX(10px) rotate(0.10turn);
+    }
+
+    10.0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+    }
 }
