@@ -46,7 +46,12 @@ footer {
     font-size: 3rem;
 }
 
-a {
+ul {
+    list-style: none;
+}
+
+a,
+li {
     width: fit-content;
     height: fit-content;
 }
@@ -109,6 +114,11 @@ header {
     display: flex;
 }
 
+.header-card.socials ul {
+    display: flex;
+    gap: 16px;
+}
+
 .header-card.description {
     flex: 3;
     margin-bottom: 16px
@@ -116,7 +126,6 @@ header {
 
 .header-card.socials {
     justify-content: right;
-    gap: 16px;
 }
 
 .header-card.socials a {
@@ -222,8 +231,12 @@ footer {
 
 .contact-card.socials {
     display: flex;
-    gap: 12px;
     flex: 2;
+}
+
+.contact-card.socials ul {
+    display: flex;
+    gap: 12px;
 }
 
 .contact-image.container {
@@ -363,6 +376,9 @@ footer {
     .contact-card.socials {
         justify-content: center;
         margin: 16px 0 64px 0;
+    }
+
+    .contact-card.socials ul {
         gap: 32px;
     }
 
@@ -384,6 +400,18 @@ footer {
 
 /*Animations*/
 
+.header-card.container li:nth-child(1) {
+    animation: 10s wiggle infinite ease-in;
+}
+
+.header-card.container li:nth-child(2) {
+    animation: 10s wiggle infinite 0.25s ease-in;
+}
+
+.header-card.container li:nth-child(3) {
+    animation: 10s wiggle infinite 0.5s ease-in;
+}
+
 .project-card.container {
     transition: transform 1s;
     backface-visibility: hidden;
@@ -394,19 +422,15 @@ footer {
     transform: scale(1.1);
 }
 
-.socials a,
-.project-card a,
-.contact-card a {
-    transition: transform 0.5s;
-}
-
-.socials a:hover,
+.socials li:hover,
 .project-card a:hover {
-    transform: translateY(-10px) scale(1.2);
+    translate: 0 -10px; 
+    scale: 1.2;
 }
 
 .contact-card a:hover {
-    transform: translateY(-10px) scale(1.1);
+    translate: 0 -10px;
+    scale: 1.1;
 }
 
 @keyframes slide-in-left-bounce {
@@ -500,6 +524,44 @@ footer {
     animation: fade-in linear both;
     animation-timeline: view();
     animation-range: entry 80% entry 90%;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    2.5% {
+        transform: translateX(-10px) rotate(-0.10turn);
+    }
+
+    5.0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    7.5% {
+        transform: translateX(10px) rotate(0.10turn);
+    }
+
+    10.0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
 }
 
 /*# sourceMappingURL=main.css.map*/
