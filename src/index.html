@@ -18,7 +18,7 @@
                 srcset="./images/header-man-1280w.jpg"
                 media="(min-width: 600px)"
             />
-            <img src="./images/header-man-640w.jpg" alt="man sitting in front of computer" width="600px" height="400px">
+            <img src="./images/header-man-640w.jpg" alt="William Neumann working at his desk" width="600" height="400">
             
             <div class="header-image name"><h1>William Neumann</h1></div>
         </picture>
@@ -37,11 +37,34 @@
                 Duis vehicula dolor eros, ac facilisis dui maximus ac.
             </p>
             
-            <div class="header-card socials">
-                <a href="https://github.com/GGihan"><img src="./images/github.svg" alt="github icon" width="50px" height="50px"></a>
-                <a href="https://www.linkedin.com/"><img src="./images/linkedin.svg" alt="linkedin icon" width="50px" height="50px"></a>
-                <a href="https://x.com/"><img src="./images/twitter.svg" alt="twitter icon" width="50px" height="50px"></a>
-            </div>      
+            <nav class="header-card socials" aria-label="Social media links">
+                <ul>
+                    <li>
+                        <a href="https://github.com/GGihan"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub profile (opens in a new tab)">
+                           <img src="./images/github.svg" alt="" role="presentation" width="50" height="50">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="linkedin homepage (opens in a new tab)">
+                           <img src="./images/linkedin.svg" alt="" role="presentation" width="50" height="50">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Twitter homepage (opens in a new tab)">
+                           <img src="./images/twitter.svg" alt="" role="presentation" width="50" height="50">
+                        </a>
+                    </li>
+                </ul>
+            </nav>    
         </section>
     </header>
 
@@ -58,8 +81,8 @@
                     <div class="project-card info">
                         <h3 class="project-card name">Project Name</h3>
                         <div class="project-card link">
-                            <a href=""><img src="./images/github.svg" alt="github icon" width="30px" height="30px"></a>
-                            <a href=""><img src="./images/open-in-new.svg" alt="open new icon" width="30px" height="30px"></a>
+                            <a href="https://github.com/GGihan?tab=repositories"><img src="./images/github.svg" alt="github icon" width="30px" height="30px"></a>
+                            <a href="https://github.com/GGihan?tab=repositories"><img src="./images/open-in-new.svg" alt="open new icon" width="30px" height="30px"></a>
                         </div>
                     </div>
                     
@@ -180,30 +203,64 @@
                 work could be mutually beneficial!
             </p>
             
-            <address class="contact-card info" >
-                <p class="contact-card address">12345 berlin <br> test-street</p>
-                <a href="" class="contact-card link"><img src="./images/phone.svg" alt="phone icon" width="30px" height="30px">+123-456789</a>
+            <address class="contact-card info">
+                <div class="contact-card address">
+                    12345 Berlin<br>
+                    Test-Street
+                </div>
+                <a href="tel:+123456789" class="contact-card link">
+                   <img src="./images/phone.svg" alt="" aria-hidden="true" width="30" height="30">
+                   +123-456789
+                </a>
                 <br>
-                <a href="" class="contact-card link"><img src="./images/email.svg" alt="email icon" width="30px" height="30px">test@email.com</a>
+                <a href="mailto:test@email.com" class="contact-card link">
+                   <img src="./images/email.svg" alt="" aria-hidden="true" width="30" height="30">
+                   test@email.com
+                </a>
             </address>
 
-            <div class="contact-card socials">
-                <a href="https://github.com/GGihan"><img src="./images/github.svg" alt="github icon" width="60px" height="60px"></a>
-                <a href="https://www.linkedin.com/"><img src="./images/linkedin.svg" alt="linkedin icon" width="60px" height="60px"></a>
-                <a href="https://x.com/"><img src="./images/twitter.svg" alt="twitter icon" width="60px" height="60px"></a>
-            </div>
+            <nav class="contact-card socials" aria-label="Social media links">
+                <ul>
+                    <li>
+                        <a href="https://github.com/GGihan"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub profile (opens in a new tab)">
+                           <img src="./images/github.svg" alt="" role="presentation" width="60" height="60">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="linkedin homepage (opens in a new tab)">
+                           <img src="./images/linkedin.svg" alt="" role="presentation" width="60" height="60">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Twitter homepage (opens in a new tab)">
+                           <img src="./images/twitter.svg" alt="" role="presentation" width="60" height="60">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </section>
         <div class="contact-image container">
             <img 
-                alt="man speaking on his mobile phone"
-                width="800px"
-                height="600px"
+                src="./images/contact-man-1280w.jpg"
+                alt="William Neumann speaking on his mobile phone"
+                width="800"
+                height="600"
+                loading="lazy"
                 srcset="
                     ./images/contact-man-640w.jpg 640w,
                     ./images/contact-man-1280w.jpg 1280w,
                     ./images/contact-man-1920w.jpg 1920w
                 "
-                sizes="(max-width: 900px)"        
+                sizes="(max-width: 900px) 100vw, 800px"        
             >
         </div>
     </footer>
